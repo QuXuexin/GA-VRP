@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 import random
 import math
 
@@ -159,3 +160,17 @@ if __name__ == '__main__':
     for i in range(len(pop[0])):
         print node[pop[0][i]],
     print "[82, 76]"
+
+    x = []
+    y = []
+    start = [82,76]
+    x.append(82)
+    y.append(76)
+    for i in range(len(pop[0])):
+        x.append(node[pop[0][i]][0])
+        y.append(node[pop[0][i]][1])
+    x.append(82)
+    y.append(76)
+    plt.plot(x, y)
+    plt.plot(82, 76, marker='o', linestyle='--', color='r', label='Start')
+    plt.show()
